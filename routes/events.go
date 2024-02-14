@@ -31,14 +31,12 @@ func getEventById(context *gin.Context) {
 
 func createEvent(context *gin.Context) {
 	var event models.Event
-
 	err := context.ShouldBindJSON(&event)
 	if err != nil {
 		context.JSON(http.StatusBadRequest, gin.H{"message": "error creating event", "error": err.Error()})
 	}
 
-	// TODO - get user id from token
-	event.UserID = 1
+	event.UserID = context.GetInt64("userId")
 
 	err = event.Save()
 	if err != nil {

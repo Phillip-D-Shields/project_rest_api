@@ -1,9 +1,10 @@
 POST http://localhost:8080/events
-Content-Type: application/json
+content-type: application/json
+# authorization: 
 
 {
-  "title" : "My second event",
-  "description" : "This is my second event",
-  "location" : "Stephens Bay",
+  "title" : "test event 0000",
+  "description" : "test description 0000",
+  "location" : "test location 0000",
   "dateTime" : "2999-12-31T23:59:59Z"
 }

@@ -33,12 +33,11 @@ func (u User) Save() error {
 		return err
 	}
 
-	userId, err := result.LastInsertId()
-	u.ID = userId
+	_, err = result.LastInsertId()
 	return err
 }
 
-func (u User) ValidateCredentials() error {
+func (u *User) ValidateCredentials() error {
 	query := "SELECT id, password FROM users WHERE email = ?"
 	row := db.Db.QueryRow(query, &u.Email)
 
