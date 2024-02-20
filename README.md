@@ -30,7 +30,7 @@ These routes require a JWT token for access.
 
 ### User Routes
 
-- `POST /signup` - Register a new user
+- `POST /signup` - Create a new user
 - `POST /login` - Authenticate a user and return a JWT token
 
 ## Authentication
@@ -39,14 +39,14 @@ This API uses JWT tokens for securing certain routes. To access protected routes
 
 ## Testing endpoints
 
-There is a api-test directory that contains files for testing endpoints usingg the vs-code REST client extension. The files are named according to the endpoint they are testing. The extension information is as follows:
+There is an api-test directory that contains files for testing endpoints using the vs-code REST client extension. The files are named according to the endpoint they are testing. The extension information is as follows:
 
-Name: REST Client
-Id: humao.rest-client
-Description: REST Client for Visual Studio Code
-Version: 0.25.1
-Publisher: Huachao Mao
-VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+- Name: REST Client
+- Id: humao.rest-client
+- Description: REST Client for Visual Studio Code
+- Version: 0.25.1
+- Publisher: Huachao Mao
+- VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=humao.rest-client
 
 ## License
 
